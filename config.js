@@ -1,5 +1,5 @@
 var fs = require('fs');
-module.exports.list = fs.readFileSync('list.txt').toString().replace(/\r\n/g, "\r").replace(/\n/g, "\r").split(/\r/);;
+module.exports.list = fs.readFileSync(__dirname+'/list.txt').toString().replace(/\r\n/g, "\r").replace(/\n/g, "\r").split(/\r/);;
 
 
 module.exports.isDomain = (str) => {
