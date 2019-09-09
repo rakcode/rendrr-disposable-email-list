@@ -48,7 +48,3 @@ module.exports.isValidDomain = (email) => {
     return result;
 
 }
-
-let res = this.isValidDomain("test@0-00.usa.cc");
-
-console.log(res);

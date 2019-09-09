@@ -1,8 +1,9 @@
 # Disposable Email List
+![](https://badge.fury.io/js/rendrr-disposable-email-list.svg) ![](https://img.shields.io/github/issues/rakcode/rendrr-disposable-email-list) ![](https://img.shields.io/github/forks/rakcode/rendrr-disposable-email-list) ![](https://img.shields.io/github/stars/rakcode/rendrr-disposable-email-list) ![](https://img.shields.io/github/license/rakcode/rendrr-disposable-email-list?logoColor=apache)
+
 Hunt down every disposable email. Probabily the most reliable email check which can detect disposable email and trash them out of your marketing database, So you don't end up paying for un-neccesary junk.
 
 Check with the list of more than **38,000** temp email provider domains for the validation. We update the list frequently, Help us getting stronger. Contribute to our [GitHub](https://github.com/rakcode/rendrr-disposable-email-list "GitHub") repository to keep the list up-to-date.
-
 
 
 ## Install
@@ -46,7 +47,7 @@ You can check the given string is a valid **email** with ignoring other test cas
 You can check the given string is a valid **domain** with validating whether its a valid email or not. you can provide either domain name or email address to validate
 
     let res = this.isValidDomain("dummy@temp-email.tld");
-	//or
+	// or
 	let res = this.isValidDomain("temp-email.tld");
 
 #### Response Format
