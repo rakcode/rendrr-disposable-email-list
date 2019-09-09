@@ -1,5 +1,6 @@
 const config = require("./config");
 
+
 module.exports.isDisposable = (email) => {
     let result = {isEmail: null, isDomain: null, isDisposable: null};
 
@@ -21,3 +22,7 @@ module.exports.isDisposable = (email) => {
     return result;
 
 }
+
+let res = this.isDisposable("test@0-00.usa.cc");
+
+console.log(res);
