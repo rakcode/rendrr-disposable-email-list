@@ -53,7 +53,7 @@ You can check the given string is a valid **domain** with validating whether its
 #### Response Format
     { isEmail: true, isDomain: true }
 
-#Licence
+#License
 
     Copyright 2019 Rendrr Devign Labs
     
