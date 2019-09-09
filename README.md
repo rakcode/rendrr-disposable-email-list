@@ -55,9 +55,6 @@ You can check the given string is a valid **domain** with validating whether its
 
 #Licence
 
-
-------------
-
     Copyright 2019 Rendrr Devign Labs
     
     Licensed under the Apache License, Version 2.0 (the "License");
