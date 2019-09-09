@@ -2,18 +2,16 @@ const config = require("./config");
 
 
 module.exports.isDisposable = (email) => {
-    let result = {isEmail: null, isDomain: null, isDisposable: null};
+    let result = {isEmail: false, isDomain: false, isDisposable: false};
 
     isEmail = config.isEmail(email);
     if(isEmail) {
         result.isEmail = true;
-        result.isDomain = false;
         email = email.split("@")[1];
     }else{
         isDomain = config.isDomain(email);
         if(isDomain) {
             result.isDomain = true;
-            result.isEmail = false;
         }
     }
 
@@ -23,6 +21,34 @@ module.exports.isDisposable = (email) => {
 
 }
 
-let res = this.isDisposable("test@0-00.usa.cc");
+module.exports.isValidEmail = (email) => {
+    let result = {isEmail: false};
+
+    isEmail = config.isEmail(email);
+    if(isEmail) {
+        result.isEmail = true;
+    }
+    return result;
+}
+
+module.exports.isValidDomain = (email) => {
+    let result = {isEmail: false, isDomain: false};
+
+    isEmail = config.isEmail(email);
+    if(isEmail) {
+        result.isEmail = true;
+        email = email.split("@")[1];
+    }
+    
+    isDomain = config.isDomain(email);
+    if(isDomain) {
+        result.isDomain = true;
+    }
+
+    return result;
+
+}
+
+let res = this.isValidDomain("test@0-00.usa.cc");
 
 console.log(res);
