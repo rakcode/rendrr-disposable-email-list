@@ -69,6 +69,3 @@ module.exports.isValidWebmail = (email) => {
     return result;
 
 }
-
-let a = this.isValidWebmail("rakcode@gmail.com");
-console.log(a);
