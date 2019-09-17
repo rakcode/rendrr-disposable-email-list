@@ -17,6 +17,8 @@ module.exports.isDisposable = (email) => {
 
     result.isDisposable = config.isDisposable(email);
 
+    result.isWebmail = config.isWebmail(email);
+
     return result;
 
 }
@@ -48,3 +50,25 @@ module.exports.isValidDomain = (email) => {
     return result;
 
 }
+
+module.exports.isValidWebmail = (email) => {
+    let result = {isEmail: false, isDomain: false, isWebmail: false};
+
+    isEmail = config.isEmail(email);
+    if(isEmail) {
+        result.isEmail = true;
+        email = email.split("@")[1];
+    }
+    
+    isDomain = config.isDomain(email);
+    if(isDomain) result.isDomain = true;
+
+    isWebmail = config.isWebmail(email);
+    if(isWebmail) result.isWebmail = true;
+
+    return result;
+
+}
+
+let a = this.isValidWebmail("rakcode@gmail.com");
+console.log(a);

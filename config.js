@@ -1,6 +1,6 @@
 var fs = require('fs');
 module.exports.list = fs.readFileSync(__dirname+'/list.txt').toString().replace(/\r\n/g, "\r").replace(/\n/g, "\r").split(/\r/);;
-
+module.exports.webmail = fs.readFileSync(__dirname+'/webmail.txt').toString().replace(/\r\n/g, "\r").replace(/\n/g, "\r").split(/\r/);;
 
 module.exports.isDomain = (str) => {
     var re = new RegExp(/^((?:(?:(?:\w[\.\-\+]?)*)\w)+)((?:(?:(?:\w[\.\-\+]?){0,62})\w)+)\.(\w{2,6})$/); 
@@ -14,4 +14,8 @@ module.exports.isEmail = (str) => {
 
 module.exports.isDisposable = (domain) => {
     return this.list.includes(domain);
+}
+
+module.exports.isWebmail = (domain) => {
+    return this.webmail.includes(domain);
 }

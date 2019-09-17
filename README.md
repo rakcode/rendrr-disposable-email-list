@@ -26,6 +26,7 @@ or you can use domain name also
 		isEmail: true, //or false
 		isDomain: false,  //or true
 		isDisposable: false //or true
+		isWebmail: false //or true
 	}
 
 ## Additional Methods
@@ -52,6 +53,17 @@ You can check the given string is a valid **domain** with validating whether its
 
 #### Response Format
     { isEmail: true, isDomain: true }
+
+### isValidWebmail
+###### Checking the string with Regular Expression and compare our list
+You can check the given string is a valid **domain** with validating whether its a valid email and **webmail** or not. you can provide either domain name or email address to validate.
+
+    let res = this.isValidWebmail("dummy@temp-email.tld");
+	// or
+	let res = this.isValidWebmail("temp-email.tld");
+
+#### Response Format
+    { isEmail: true, isDomain: true, isWebmail: true }
 
 #License
 
